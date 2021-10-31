@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processer</title>
+</head>
+<body>
+    <div class="main">
+        <input type="number" name="num1" id="num1"/>
+        <input type="number" name="num2" id="num2"/>
+        <select name="operation" id="operation">
+            <option value="+">ADD</option>
+            <option value="-">SUBTRACT</option>
+            <option value="*">MULTIPLY</option>
+            <option value="/">DIVIDE</option>
+            <option value="%">MODULO</option>
+            <option value=".." selected disabled>--Select an operation--</option>
+        </select>
+        <button onclick="process()">CALCULATE</button>
+        <div id="output"></div>
+    </div>
+    <script>
+        function process(){
+            let n1 = parseInt(document.querySelector('#num1').value);
+            let n2 = parseInt(document.querySelector('#num2').value);
+            console.log(n1);
+            if( isNaN(n1) ){
+                console.log('n1 is nan');
+                n1 = 0;
+            }
+            if(isNaN(n2) == true){
+                n2 = 0;
+            }
+            let operation = document.querySelector('#operation').value;
+            let output = 0
+            if(operation == '+'){
+                output = n1 + n2;
+            } else if(operation == '-'){
+                output = n1 - n2;
+            } else if(operation == '*'){
+                output = n1 * n2;
+            } else if(operation == '/'){
+                output = n1 / n2;
+            } else if(operation == '%'){
+                output = n1 % n2;
+            } else{
+                output = "Select an operation first";
+            }
+            console.log(operation);
+            document.querySelector('#output').innerHTML = output;
+            document.querySelector('#num1').value = '';
+            document.querySelector('#num2').value = '';
+        }
+    </script>
+</body>
+</html>
