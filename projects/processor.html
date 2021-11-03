@@ -6,30 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Processer</title>
     <style>
+        body{
+            background-color: rgb(178, 236, 191);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            filter: brightness(0.9);
+        }
+        .main{
+            background-color: #60a767;
+            
+            display: inline-flex;
+            text-align: center ;
+            padding: 8rem  0rem;
+            border-radius: 0.3rem;
+            align-items: center;
+            justify-content: center;
+            
+
+            
+        }
         .num{
-            padding: 0.5rem;
             border-radius: 0.3rem;
             border: 1px solid #ccc;
             outline: 0rem;
             display: flex;
             align-items: center;
+            padding: 0.5rem;
+            margin: 0.4rem 1rem;
+            background-color: rgb(153, 226, 153);
+            
         }
+        .inner-div{ 
+            border: 1px solid #ccc;
+            display: flex;
+            padding: 2rem;
+            background-color: #206328;
+            border-radius: 0.3rem;
+            border:none;
+            flex-direction: column;
+            margin: 2rem;
+        }
+        .select{
+            margin: 0.9rem;
+            background-color: rgb(90, 177, 79);
+            padding: 0.4rem;
+            outline: none;
+            border: none;
+            border-radius: 0.3rem;
+        }
+        .select:hover{
+            background-color: rgb(80, 119, 70);
+        }
+        .calculate{
+            background-color: rgb(90, 177, 79);
+            padding: 0.4rem;
+            outline: none;
+            border: none;
+            border-radius: 0.3rem;
+            color: rgb(218, 218, 218);
+            size: 18px;
+        }
+        .calculate:hover{
+            background-color: rgb(80, 119, 70);
+
+        }
+        
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+         margin: 0;
+            }
+
+        input[type=number] {
+        -moz-appearance: textfield;
+        }
+        .output{
+            background-color: rgb(90, 177, 79);
+            margin: 1rem;
+            display: inline-block;
+            border-radius: 0.3rem;
+            
+        }
+   
     </style>    
-</head>
+</head> 
 <body>
     <div class="main">
-        <input type="number" name="num1" class="num" id="num1"/>
-        <input type="number" name="num2" class="num" id="num2"/>
-        <select name="operation" id="operation">
-            <option value="+">ADD</option>
-            <option value="-">SUBTRACT</option>
-            <option value="*">MULTIPLY</option>
-            <option value="/">DIVIDE</option>
-            <option value="%">MODULO</option>
-            <option value=".." selected disabled>--Select an operation--</option>
-        </select>
-        <button onclick="process()">CALCULATE</button>
-        <div id="output"></div>
+
+        <div class="input">
+            <input type="number" name="num1" class="num" id="num1">
+            <input type="number" name="num2" class="num" id="num2">
+        </div>
+
+        <div class="inner-div"> 
+            <select name="operation" class="select" id="operation">
+                <option value="+">ADD</option>
+                <option value="-">SUBTRACT</option>
+                <option value="*">MULTIPLY</option>
+                <option value="/">DIVIDE</option>
+                <option value="%">MODULO</option>
+                <option value=".." selected disabled>--Select an operation--</option>
+            </select>
+            <button onclick="process()" class="calculate" >CALCULATE</button>
+            <div id="output" class="output"></div>
+        </div>
+
     </div>
     <script>
         function process(){
@@ -37,14 +119,13 @@
             let n2 = parseInt(document.querySelector('#num2').value);
             console.log(n1);
             if( isNaN(n1) ){
-                console.log('n1 is nan');
                 n1 = 0;
             }
             if(isNaN(n2) == true){
                 n2 = 0;
             }
             let operation = document.querySelector('#operation').value;
-            let output = 0
+            let output;
             if(operation == '+'){
                 output = n1 + n2;
             } else if(operation == '-'){
@@ -58,11 +139,15 @@
             } else{
                 output = "Select an operation first";
             }
-            console.log(operation);
             document.querySelector('#output').innerHTML = output;
             document.querySelector('#num1').value = '';
             document.querySelector('#num2').value = '';
         }
+
+        // if(false){
+        //     let a= 10;
+        // } 
+        print(a)
     </script>
 </body>
 </html>
