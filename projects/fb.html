@@ -1,39 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facebook</title>
-
-    <style>
-        .fb-logo{
-            height: 8rem;
-            
-        }
-        .fb-text{
-            font-family: sans-serif;
-            font-size: 1.5rem;
-            width: 30rem;
-        }
-    </style>
-
+    <link rel="stylesheet" href="./css/fb.css">
 </head>
-
 <body>
-<div>
-
-    <div>
-        <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="Facebook" class="fb-logo">  
-        <div class="fb-text">  Facebook helps you connect and share with the people in your life.     </div>
+    <div class="main">
+        <div class="left-main">
+            <div class="left-container">
+                <div class="logo">
+                    <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="Facebook" class="fb-logo">  
+                </div>
+                <div class="info">
+                    Facebook helps you connect and share with the people in your life.
+                </div>
+            </div>
+        </div>
+        <div class="right-main">
+            <div class="right-container">
+                <div class="form-div">
+                    <form class="form">
+                        <input type="text" class="form-item input" name="username" placeholder="Email address or phone number">
+                        <input type="password" class="form-item input" name="password" placeholder="Password">
+                        <button class="button form-item login-btn">Log In</button>
+                        <a href="#" class="form-item anchor">Forgotten password?</a>
+                        <div class="divider form-item"></div>
+                        <button class="button signup-btn form-item">Create New Account</button>
+                        
+                    </form>
+                </div>
+                <div class="page-div">
+                    <a>Create a Page</a> for a celebrity, brand or business.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="languages">
+            Languages
+        </div>
+        <div class="divider footer-divider"></div>
+        <div class="extra-links">Extra Links</div>
+        <div class="copyyright">
+            Facebook &copy; 2021
+        </div>
 
     </div>
-      
-
-
-
-
-
 </body>
 </html>

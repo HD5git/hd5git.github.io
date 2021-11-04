@@ -1,0 +1,115 @@
+:root{
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+.main{
+    background-color: #edf0f5;
+    height: 80vh;
+    display: flex;
+    /* Default so not needed */
+    /* flex-direction: row;*/ 
+}
+.left-main{
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.left-container{
+    display: flex;
+    justify-content:flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+}
+.fb-logo{
+    height: 8rem;
+    margin-left: -2.3rem;
+    margin-bottom: -1rem;
+}
+.info{
+    font-size: 1.5rem;
+    width: 500px;
+}
+.right-main{
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.right-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-div{
+    width: 100%;
+}
+.form{
+    background-color: #fff;
+    box-shadow: 0 0 1rem 0.01rem #ccc;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0.5rem;
+    width: 24.75rem;
+}
+.form-item{
+    font-size: large;
+    margin: 0.4rem;
+    padding: 1rem 1.3rem;
+    border-radius: 0.3rem;
+    border: 0rem;
+    text-align: center;
+}
+.input{
+    border:1px solid #eee;
+    outline: none;
+    text-align: left;
+}
+.input:focus{
+    outline: 2px solid rgb(239, 246, 255);
+    border: 1px solid rgb(0, 110, 255);
+}
+::placeholder{
+    filter: brightness(1.25);
+    font-size: 17px;
+}
+.login-btn{
+    background-color: #1877f2;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+.form-item:nth-child(3),
+.form-item:nth-child(4),
+.form-item:nth-child(6)
+{
+    padding: 0.8rem 1.3rem;
+}
+.anchor{
+    text-decoration: none;
+    color: #1877f2;
+    font-size: 0.9rem;
+    padding:0.6rem 1.3rem !important;
+}
+.anchor:hover{
+    text-decoration: underline;
+}
+.divider{
+    padding: 0rem;
+    background-color: #ddd;
+    height:1px;
+}
+.signup-btn{
+    align-self: center;
+    font-weight: bolder;
+    color: #fff;
+    background-color: #42b72a;
+}
+.footer{
+    border: 1px solid #ccc;
+    height: 20vh;
+}
